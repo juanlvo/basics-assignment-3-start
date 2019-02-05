@@ -10,4 +10,22 @@
       </ol>
     </div>
   </div>
+  <div class="row">
+    <ol>
+      <li>
+        <button (click)="onClickDetails()">Display Details</button>
+      </li>
+      <li>
+        <p>Secret Password = {{ password }}</p>
+      </li>
+      <li>
+        <div *ngFor="let message of messages">
+          <p [ngStyle]="{backgroundColor: getColorBackground(message)}"
+             [ngClass]="{messageWhite: getMessageColor(message) === true}">
+            {{ message }}
+          </p>
+      </div>
+      </li>
+    </ol>
+  </div>
 </div>
