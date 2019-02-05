@@ -19,9 +19,9 @@
         <p>Secret Password = {{ password }}</p>
       </li>
       <li>
-        <div *ngFor="let message of messages">
-          <p [ngStyle]="{backgroundColor: getColorBackground(message)}"
-             [ngClass]="{messageWhite: getMessageColor(message) === true}">
+        <div *ngFor="let message of messages; let i = index">
+          <p [ngStyle]="{backgroundColor: getColorBackground(i)}"
+             [ngClass]="{messageWhite: getMessageColor(i) === true}">
             {{ message }}
           </p>
       </div>

@@ -13,10 +13,10 @@ export class AppComponent {
   onClickDetails() {
     if (this.password == '****') {
       this.password = 'tuna';
-      this.messages.push(this.numberOfMessage);
+      this.messages.push(new Date());
     } else {
       this.password = '****';
-      this.messages.push(this.numberOfMessage);
+      this.messages.push(new Date());
     }
     this.numberOfMessage++;
   }
